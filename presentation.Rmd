@@ -22,37 +22,37 @@ class: center, middle
 
 # Tipos de uso
 
-El uso de **R** es conveniente porque puede ser usado para tareas generalistas como para tareas de especialidad  (biología y medio ambiente)
+**R** es conveniente porque puede ser usado tanto para tareas generalistas o transferibles (mayormente, manejo de datos) como para tareas de especialidad (biología y medio ambiente).
 
 .pull-left[
 **Generalista**
 
-- Enfocado a la experiencia en el manejo de R 
+- Experiencia en R + aptitud.
 
-- Ordenamiento de datos
+- Ordenamiento de datos.
 
-- Exploración de datos
+- Exploración de datos.
 
-- Generación de gráficos
+- Generación de gráficos.
 
-- Generación de reportes
+- Generación de reportes.
 
-- Automatización
+- Automatización.
 ]
 .pull-right[
-**Especialista**
+**De especialidad**
 
-- Requiere validación de un profesional 
+- Conocimientos especializados. 
 
-- Modelos estadísticos
+- Modelos estadísticos.
 
-- [Análisis espaciales](https://cran.r-project.org/web/views/Spatial.html)
+- [Análisis espaciales](https://cran.r-project.org/web/views/Spatial.html).
 
-- [Análisis espaciotemporales](https://cran.r-project.org/web/views/SpatioTemporal.html)
+- [Análisis espaciotemporales](https://cran.r-project.org/web/views/SpatioTemporal.html).
 
-- [Evaluaciones de biodiversidad](https://cran.r-project.org/web/views/Environmetrics.html)
+- [Evaluaciones de biodiversidad](https://cran.r-project.org/web/views/Environmetrics.html).
 
-- [Modelamiento hidrológico](https://cran.r-project.org/web/views/Hydrology.html)
+- [Modelamiento hidrológico](https://cran.r-project.org/web/views/Hydrology.html).
 
 ]
 
