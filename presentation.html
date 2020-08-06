@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R en consultoría ambiental</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="José Cuadros" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
+    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# R en consultoría ambiental
+## Algunas recomendaciones para su aprendizaje
+### José Cuadros
+### 2020-08-01 (actualizado: 2020-08-06)
+
+---
+
+class: center, middle
+
+# Un poco de panorama
+
+
+---
+
+# Tipos de uso
+
+El uso de **R** es conveniente porque puede ser usado para tareas generalistas como para tareas de especialidad  (biología y medio ambiente)
+
+.pull-left[
+**Generalista**
+
+- Enfocado a la experiencia en el manejo de R 
+
+- Ordenamiento de datos
+
+- Exploración de datos
+
+- Generación de gráficos
+
+- Generación de reportes
+
+- Automatización
+]
+.pull-right[
+**Especialista**
+
+- Requiere validación de un profesional 
+
+- Modelos estadísticos
+
+- [Análisis espaciales](https://cran.r-project.org/web/views/Spatial.html)
+
+- [Análisis espaciotemporales](https://cran.r-project.org/web/views/SpatioTemporal.html)
+
+- [Evaluaciones de biodiversidad](https://cran.r-project.org/web/views/Environmetrics.html)
+
+- [Modelamiento hidrológico](https://cran.r-project.org/web/views/Hydrology.html)
+
+]
+
+
+---
+class: inverse, center, middle
+
+# Empecemos por aplicaciones generalistas&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[
+&lt;sup&gt;1&lt;/sup&gt; AKA data science, en esta ocasión.]
+
+---
+
+class: center
+# ¿Cuándo programar?
+
+&lt;img src="image00212.jpg" style="width: 65%" /&gt;
+
+
+---
+class: center, middle
+# El proceso de data science
+
+
+&lt;img src="data-science.svg" style="width: 100%" /&gt;
+
+La ciencia de datos es la disciplina encargada de transformar datos crudos en conocimiento.
+
+---
+class: center, middle
+
+# Tip 1: Empiecen por tidyverse.
+
+---
+
+class: center, middle
+background-image: url(hex_tidyverse.svg)
+background-size: contain
+
+---
+# El tidyverse y los recursos
+
+.pull-left[
+&lt;a href="https://www.tidyverse.org/"&gt;
+  &lt;img src="tidyverse-package-workflow.png"&gt;
+&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+ Conjunto de paquetes orientados para el manejo y transformación de datos que comparten **filosofía de diseño**, **gramática** y **estructura de datos**.
+
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;a href="http://gen.lib.rus.ec/book/index.php?md5=D2959053C56450FF841B133AE038A16D"&gt;
+  &lt;img src="cover.png"  style="width: 140px"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+- R for Data Science. [[EN]](https://r4ds.had.co.nz/) [[ES]](https://es.r4ds.hadley.nz/)
+- [Cheatsheets](https://rstudio.com/resources/cheatsheets/).
+- Comunidad R:
+  - [useR!](https://www.youtube.com/channel/UC_R5smHVXRYGhZYDJsnXTwg/featured).
+  - Stack Overflow.
+  - [#rstats](https://twitter.com/search?q=%2523rstats).
+  - [#TidyTuesday](https://github.com/rfordatascience/tidytuesday).
+  - [RLadies](https://rladies.org/).
+- **Google**.
+- ?
+]
+---
+class: center, middle
+
+# Tip 2: ¡Ordenen sus datos!
+
+.footnote[
+[Wickham (2014). Tidy data. _Journal of Statistical Software_, &lt;b&gt;59 &lt;/b&gt;(10), 1-23.](http://dx.doi.org/10.18637/jss.v059.i10)
+]
+
+---
+class: center, middle
+
+# Tip 3: Usen pipes para la manipulación de datasets.
+
+### [¿Tuberías?](https://othomantegazza.github.io/eda-class/slides/02-intro-to-tidyverse.html)
+
+---
+class: inverse, center, middle
+
+# Sigamos con las aplicaciones de especialistas&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[
+&lt;sup&gt;1&lt;/sup&gt; O sea, ustedes.]
+
+---
+
+class: center, middle
+
+# Tip 4: Usen los [CRAN Task View](https://cran.r-project.org/web/views/).
+
+---
+class: center, middle
+background-image: url('Cran task view.png')
+background-size: contain
+---
+
+class: center, middle
+
+# Tip 5: Busquen bibliografía especializada.
+
+.footnote[
+La mayoría son libres. Sino, [Library Genesis](http://gen.lib.rus.ec/).]
+---
+.pull-left[
+## Ecología
+&lt;center&gt;
+.column[
+&lt;a href='http://gen.lib.rus.ec/book/index.php?md5=A3F1BD1017AED3F423C7270ED278F43B'&gt;
+&lt;img src="NumEcoTheory.png" style="height: 300px" &gt;
+&lt;/a&gt;
+&lt;a href='http://gen.lib.rus.ec/book/index.php?md5=A0DA422B517A1D0C45F65137FBD2BE94'&gt;
+&lt;img src="SpatEco.jpg" style="height: 300px" &gt;
+&lt;/a&gt;
+]
+&lt;/center&gt;
+
+- R es [**muy popular**](https://doi.org/10.1002/ecs2.2567) en ecología.
+- Ecología numérica por Pierre Legendre:
+  - [Libro práctico](http://gen.lib.rus.ec/book/index.php?md5=5FD3692B89EF55A90EBDBCCC44168176) en R con [scripts](http://adn.biol.umontreal.ca/~numericalecology/numecolR/).
+  - [Curso](http://adn.biol.umontreal.ca/~numericalecology/Trieste16/) grabado, publicado en [YouTube](https://www.youtube.com/playlist?list=PLos1JqOLJm3soC42-SV-zyLT9WEFi4Qji).
+  - [Notas del curso](http://biol09.biol.umontreal.ca/Trieste16/).
+- Ecología espacial por Marie-Jose Fortin.
+]
+
+.pull-right[
+## Agua
+&lt;center&gt;
+.column[
+&lt;a href='https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf'&gt;
+&lt;img src="WRStat.png" style="height: 300px" &gt;
+&lt;/a&gt;
+&lt;a href='https://hess.copernicus.org/preprints/hess-2019-50/hess-2019-50.pdf'&gt;
+&lt;img src="HydroR.png" style="height: 300px" &gt;
+&lt;/a&gt;
+]
+&lt;/center&gt;
+- Recomendado por la USGS para análisis estadísticos&lt;sup&gt;*&lt;/sup&gt;.
+- Herramientas de [homogenización de datos climáticos](https://cran.r-project.org/web/packages/climatol/index.html).
+- Paquetes para rápido análisis hidrográficos.
+- Algunos modelos físicos implementados en R (topmodel, WASIM, SWC).
+
+]
+
+---
+class: center, middle
+
+# Tip 6: Preguntas especializadas pueden hacerlas a través de mailing lists. 
+
+.footnote[
+Por ahora, solo están disponibles listas para [ecología](https://stat.ethz.ch/mailman/listinfo/r-sig-ecology) y [geografía](https://stat.ethz.ch/mailman/listinfo/r-sig-geo).]
+---
+.pull-left[
+## Aire
+&lt;center&gt;
+&lt;a href='http://www.openair-project.org/PDF/OpenAir_Manual.pdf'&gt;
+&lt;img src="openair.png" style="height: 300px" &gt;
+&lt;/a&gt;
+
+&lt;/center&gt;
+- Paquete principal: OpenAir por David Carslaw.
+- Diseñado para hacer análisis avanzado de datos de estaciones automáticas (meteorología y calidad de aire).
+- Retrotrayectorias disponibles.
+- Mudando a [tidyverse](https://bookdown.org/david_carslaw/openair/).
+]
+
+.pull-right[
+## Espacial
+&lt;center&gt;
+&lt;a href='http://gen.lib.rus.ec/book/index.php?md5=AE027C1EB5D0D3B72C8FAC3897CD3776'&gt;
+&lt;img src="SpatR.png" style="height: 300px" &gt;
+&lt;/a&gt;
+&lt;/center&gt;
+- Edzer Pebesma y Roger Bivand.
+- Todos los años hay una escuela de verano en Europa: [OpenGeoHub](https://www.opengeohub.org/).
+- Muchas de las conferencias de OpenGeoHub están disponibles en [Youtube](https://www.youtube.com/c/OpenGeoHubFoundation).
+
+]
+
+
+---
+class: center, middle
+
+# Tip 7: Aprender con un objetivo concreto es más efectivo que aprender aleatoriamente. 
+
+---
+background-image: url(hackathons.png)
+background-size: contain
+class: center, middle
+
+---
+class: center, middle
+
+# Tip 8: Los códigos deben ser entendibles y reproducibles. 
+
+---
+class: center, middle
+
+# Tip 9: Aprovechen las funcionalidades de R.
+
+---
+
+```r
+library(leaflet)
+leaflet() %&gt;% addTiles() %&gt;% setView(-76.987, -12.11, zoom = 17) %&gt;%
+  addMarkers(-76.9870163,-12.1105517,popup="INSIDEO")
+```
+
+<div id="htmlwidget-ae7970f4ec1e6303bc45" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ae7970f4ec1e6303bc45">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-12.1105517,-76.9870163,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"INSIDEO",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[-12.11,-76.987],17,[]],"limits":{"lat":[-12.1105517,-12.1105517],"lng":[-76.9870163,-76.9870163]}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+class: center, middle
+
+# R en consultoría ambiental
+Diapositivas realizadas en [**xaringan**](https://bookdown.org/yihui/rmarkdown/xaringan.html).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
