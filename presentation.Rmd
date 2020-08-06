@@ -249,7 +249,7 @@ class: center, middle
 # Tip 7: Aprender con un objetivo concreto es más efectivo que aprender aleatoriamente. 
 
 ---
-background-image: url(hackathons.png)
+background-image: url(Hackathons.png)
 background-size: contain
 class: center, middle
 
